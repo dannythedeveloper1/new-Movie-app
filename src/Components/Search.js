@@ -34,25 +34,37 @@ const Search = () => {
             // justifyContent: "center",
             alignItems:"center",
             flexWrap:"wrap"
+        },
+        form: {
+            marginTop:"20px",
+            display: "flex",
+            justifyContent: "space-evenly",
+            alignItems:"center",
+        },
+        input: {
+            backgroundColor: "lightgray",
+            border: "none",
+            borderRadius:"5px"
         }
     }
 
 	return (
 		<div>
-			<form onSubmit={handleSubmit}>
+			<form onSubmit={handleSubmit} style={styles.form}>
 				<input
+					style={styles.input}
 					name="searchValue"
 					type="text"
 					placeholder="Search Movie"
 					onChange={handleChange}
 				/>
-				<select name="type" onChange={handleChange}>
+				<select name="type" onChange={handleChange} style={styles.input}>
 					<option>Choose Type</option>
 					<option>movie</option>
 					<option>series</option>
 					<option>game</option>
 				</select>
-				<Button bgColor="lightblue" size="medium" color="white">
+				<Button bgColor="lightblue" size="small" color="white">
 					Search
 				</Button>
 			</form>
