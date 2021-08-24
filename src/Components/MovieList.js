@@ -29,11 +29,15 @@ const MovieList = (props) => {
 	return (
 		<div style={styles}>
 			<img src={props.poster} alt="" style={styles.img} />
-			<Button color="white" bgColor="#3498db" onClick={modalToggle}>
+			<Button color="white" bgColor="#007bff" onClick={modalToggle}>
 				Open
 			</Button>
 			<Modal isOpen={show} onRequestClose={modalToggle}>
-				<Button style={{marginLeft:"0"}} hbgColor="red" onClick={modalToggle}>
+				<Button
+					style={{ marginLeft: "0" }}
+					hbgColor="red"
+					onClick={modalToggle}
+				>
 					X
 				</Button>
 				<MovieDetails id={props.id} />

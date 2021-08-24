@@ -64,7 +64,7 @@ const Search = () => {
 					<option>series</option>
 					<option>game</option>
 				</select>
-				<Button bgColor="lightblue" size="small" color="white">
+				<Button bgColor="#007bff" size="small" color="white">
 					Search
 				</Button>
 			</form>
